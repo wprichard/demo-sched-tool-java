@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.nasc.esg.model.DemoSchedAppModule">
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="oracle.nasc.esg.model.Model" name="DemoSchedAppModuleLocal" ApplicationName="oracle.nasc.esg.model.DemoSchedAppModule">
+         <Security AppModuleJndiName="oracle.nasc.esg.model.DemoSchedAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/DemoSchedConnDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="DemoSchedAppModuleShared" ApplicationName="oracle.nasc.esg.model.DemoSchedAppModule" DeployPlatform="LOCAL" JDBCName="DemoSchedConn" jbo.project="oracle.nasc.esg.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="oracle.nasc.esg.model.DemoSchedAppModule"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
